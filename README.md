@@ -3,6 +3,10 @@ A free course from Harvard University which introduces fundamental concepts of c
 
 >***Note : Acknowledgement [Academic Honesty](https://cs50.harvard.edu/x/2021/honesty/#academic-honesty) before continuing below.*** 
 
+## Todo list :
+- [ ] Problem set 8 : Homepage
+- [ ] Final project : Sorting Visualizer or Algo visualizer
+
 ## [WEEK 0 : Scratch](https://cs50.harvard.edu/x/2021/weeks/0/) :smiley_cat: 
   - [Problem set 0](https://cs50.harvard.edu/x/2021/psets/0/) (haven't done it yet :x:) 
   
