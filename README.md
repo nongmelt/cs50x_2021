@@ -55,6 +55,6 @@ A free course from Harvard University which introduces fundamental concepts of c
   - [Lab 8 : Trivia](https://cs50.harvard.edu/x/2021/labs/8/)
   - [Problem set 8 : Homepage](https://cs50.harvard.edu/x/2021/psets/8/homepage/) (haven't done it yet :x:)
 
-## [WEEK 9 : Flask](https://cs50.harvard.edu/x/2021/weeks/9/) <img src="https://img.icons8.com/fluency/48/000000/flask.png" width="20>
+## [WEEK 9 : Flask](https://cs50.harvard.edu/x/2021/weeks/9/) <img src="https://img.icons8.com/fluency/48/000000/flask.png" width="20">
   - [Lab 9 : Birthdays](https://cs50.harvard.edu/x/2021/labs/9/)
   - [Problem set 9 : Finance](https://cs50.harvard.edu/x/2021/psets/9/finance/)
