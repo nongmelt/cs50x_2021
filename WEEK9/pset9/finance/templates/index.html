@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th class="text-start">Symbol</th>
+              <th class="text-start">Name</th>
+              <th class="text-end">Available Shares</th>
+              <th class="text-end">Market Price</th>
+              <th class="text-end">TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for port in portfolio %}
+            <tr>
+                <td class="text-start">{{port["symbol_shares"]}}</td>
+                <td class="text-start">{{port["name_shares"]}}</td>
+                <td class="text-end">{{port["available_shares"]}}</td>
+                <td class="text-end">{{port["market_price"]}}</td>
+                <td class="text-end">{{port["total"]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="border-0" style="text-align: right; font-weight: bold;" colspan="4">Cash</td>
+                <td class="border-0 text-end">{{user_cash}}</td>
+            </tr>
+
+            <tr>
+                <td class="border-0" style="text-align: right; font-weight: bold;" colspan="4">TOTAL</td>
+                <td class="border-0 text-end">{{profit_shares}}</td>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}

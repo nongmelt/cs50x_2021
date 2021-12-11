@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post">
+        <div class="form-group">
+            <select name="symbol" style="width:150px;">
+                <option disabled selected value="" style="text-align : center;">Symbol</option>
+                {% for port in portfolio %}
+                    <option value="{{port["symbol_shares"]}}">{{port["symbol_shares"]}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="shares" placeholder="Shares" type="number" min="1" required>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Quote</button>
+        </div>
+    </form>
+{% endblock %}

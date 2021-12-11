@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th class="text-start">Symbol</th>
+              <th class="text-start">Name</th>
+              <th class="text-end">Status</th>
+              <th class="text-end">Shares</th>
+              <th class="text-end">Price</th>
+              <th class="text-end">Transacted</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+            <tr>
+                <td class="text-start">{{record["symbol"]}}</td>
+                <td class="text-start">{{record["name"]}}</td>
+                {% if record["status"] == "BUY" %}
+                    <td class="text-end" style="color:green;">{{record["status"]}}</td>
+                {% else %}
+                    <td class="text-end" style="color:red;">{{record["status"]}}</td>
+                {% endif %}
+                <td class="text-end">{{record["shares"]}}</td>
+                <td class="text-end">{{record["price"]}}</td>
+                <td class="text-end">{{record["time"]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

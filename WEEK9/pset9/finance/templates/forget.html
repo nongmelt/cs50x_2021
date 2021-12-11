@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Forget password
+{% endblock %}
+
+{% block main %}
+    <form action="/forget" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Next</button>
+    </form>
+{% endblock %}

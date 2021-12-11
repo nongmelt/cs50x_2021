@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <title>Trivia!</title>
+
+        <script>
+            // TODO: Add code to check answers to questions
+        $(document).ready(function() {
+            $("button").click(function() {
+                var btn = $(this).get(0).className;
+                var check = "incorrect";
+
+                if (btn == "answer-question1") {
+                    var check = $(this).val();
+                    var report = ".report-question1";
+                }
+                else if (btn == "answer-question2") {
+                    var report = ".report-question2";
+                    if ($("input").val().toLowerCase() == "scotland") {
+                        check = "correct";
+                    }
+                }
+
+                if (check == "correct") {
+                        $(report).html("<h4 style='color:#20b062;'> Correct! </h4>");
+                }
+                else if (check == "incorrect") {
+                        $(report).html("<h4 style='color:#ff4545;'> Incorrect </h4>");
+                }
+
+            });
+        });
+
+        </script>
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3> Which statement is <span style="color:#ff4747; font-weight:bold;"> NOT </span> true? </h3>
+                <h4 class="report-question1"></h4>
+                <button class="answer-question1" value="incorrect"> 0 == "0" </button>
+                <button class="answer-question1" value="incorrect"> 0 == [ ] </button>
+                <button class="answer-question1" value="correct"> "0" == [ ] </button>
+                <button class="answer-question1" value="incorrect"> 0 == "" </button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3> The unicorn is the national animal of which country? </h3>
+                <h4 class="report-question2"></h4>
+                <input type="text">
+                <button type="submit" class="answer-question2"> Submit </button>
+            </div>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Birthdays</title>
+        {% if msg %}
+        <script>
+            alert(msg);
+        </script>
+        {% endif %}
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1>Birthdays</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+
+                <h2>Add a Birthday</h2>
+                <!-- TODO: Create a form for users to submit a name, a month, and a day -->
+                <form action="/" method="post">
+                    <input type="text" autocomplete="off" autofocus name="name" placeholder="Name">
+                    <input type="date" name="birthday" min="1921-01-01" max="2022-01-01" style="width: 10%";>
+                    <select name="cmd" style="width: 8%; height:29.5px">
+                        <option disabled selected value="">Query</option>
+                        {% for query in queries %}
+                            <option value="{{query}}">{{query}}</option>
+                        {% endfor %}
+                    </select>
+                    <input type="submit">
+                </form>
+            </div>
+
+            <div class="section">
+
+                <h2>All Birthdays</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Birthday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- TODO: Loop through the database entries to display them in this table -->
+                        {% for birthday in birthdays %}
+                        <tr>
+                            <th> {{birthday["name"]}} </th>
+                            <th style="font-weight: bold;">
+                                {% if birthday["month"] < 10 %}
+                                    0{{birthday["month"]}}
+                                {% else %}
+                                    {{birthday["month"]}}
+                                {% endif %}
+
+                                {% if birthday["day"] < 10 %}
+                                    / 0{{birthday["day"]}}
+                                {% else %}
+                                    / {{birthday["day"]}}
+                                {% endif %}
+                            </th>
+
+                        </tr>
+
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

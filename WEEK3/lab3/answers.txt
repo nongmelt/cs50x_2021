@@ -1,0 +1,48 @@
+sort1 uses: bubble sort
+
+random5000 -> 0.143s
+random10000 -> 0.476s
+random50000 -> 17.801s
+
+reversed5000 -> 0.074s
+reversed10000 -> 0.393s
+reversed50000 -> 12.198s
+
+sorted5000 -> 0.013s
+sorted10000 -> 0.034s
+sorted50000 -> 4.439s
+
+How do you know?: The running times of sorted cases are significantly dropped compared to the other cases. 
+
+sort2 uses: merge sort
+
+random5000 -> 0.012s
+random10000 -> 0.501s
+random50000 -> 4.742s
+
+reversed5000 -> 0.010s
+reversed10000 -> 0.090s
+reversed50000 -> 6.838s
+
+sorted5000 -> 0.016s
+sorted10000 -> 0.023s
+sorted50000 -> 6.033s
+
+How do you know?: The running times of all types of cases are in the small gap among each other,
+which means the big O notation and omega notation is the same formula.
+
+sort3 uses: selection sort
+
+random5000 -> 0.070s
+random10000 -> 0.254s
+random50000 -> 8.652s
+
+reversed5000 -> 0.101s
+reversed10000 -> 0.201s
+reversed50000 -> 13.963s
+
+sorted5000 -> 0.105s
+sorted10000 -> 0.171s
+sorted50000 -> 9.516s
+
+How do you know?: Random and sorted cases's running time is the same. 
