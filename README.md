@@ -1,6 +1,7 @@
-# CS50's Introduction to Computer Science A free course from Harvard University which introduces fundamental concepts of computer science  and programming. >
+# CS50's Introduction to Computer Science 
+A free course from Harvard University which introduces fundamental concepts of computer science  and programming. 
 
-***Note : Acknowledgement [Academic Honesty](https://cs50.harvard.edu/x/2021/honesty/#academic-honesty) before continuing below.*** 
+>***Note : Acknowledgement [Academic Honesty](https://cs50.harvard.edu/x/2021/honesty/#academic-honesty) before continuing below.*** 
 
 ## [WEEK 0 : Scratch](https://cs50.harvard.edu/x/2021/weeks/0/) :smiley_cat: 
   - [Problem set 0](https://cs50.harvard.edu/x/2021/psets/0/) (haven't done it yet) 
@@ -23,4 +24,4 @@
   - [Lab 3 : Sort](https://cs50.harvard.edu/x/2021/labs/3/) 
   - [Problem set 3](https://cs50.harvard.edu/x/2021/psets/3/) 
     - [Plurality](https://cs50.harvard.edu/x/2021/psets/3/plurality/) 
-    - [Tideman]https://cs50.harvard.edu/x/2021/psets/3/tideman/
+    - [Tideman](https://cs50.harvard.edu/x/2021/psets/3/tideman/)
